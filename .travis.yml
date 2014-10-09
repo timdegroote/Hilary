@@ -5,6 +5,7 @@ node_js:
 branches:
   only:
     - master
+    - merge-oae-9.0.0
 
 env:
   global:
@@ -87,7 +88,7 @@ before_install:
   - node node_modules/ep_etherpad-lite/node/server.js &> /dev/null &
 
   # Position ourselves to start the test in "script" phase
-  - cd ~/build/CUL-DigitalServices/avocet-hilary
+  - cd ~/build/timdegroote/Hilary
 
   # Enable preview processing
   - printf "\n\nconfig.previews.enabled = true;" >> config.js
